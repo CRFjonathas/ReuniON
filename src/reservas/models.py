@@ -59,6 +59,7 @@ class Reuniao(models.Model):
     # Configurações extras da classe
     class Meta:
         ordering = ['data_reuniao', 'hora_inicio'] # Ordena a lista automaticamente por data e hora
-
+        verbose_name = "Reunião"
+        verbose_name_plural = "Reuniões" # Corrige erro de ortografia do Django de "Reuniaos" para "Reuniões".
     def __str__(self):
         return f"{self.data_reuniao} - {self.titulo}"
